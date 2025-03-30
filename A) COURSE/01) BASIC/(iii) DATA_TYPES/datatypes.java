@@ -13,19 +13,24 @@ public class datatypes {
                     int i = 10;         //Its range of values is -2,147,483,648 to 2,147,483,647 (32-bits)
                     long l = 2L;        //Its range of values is 9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 (64-bits)
 
+                    System.out.println("byte: "+bt+", short: "+st+", int: "+i+", long: "+l);
+
                 //(ii.) Floating Point
                     float f = 3.14f;    // (32-bits)
                     double d = 3.24;    //(64-bits)
+                    System.out.println("float: "+f+", double: "+d);
 
 
             //(02) Non-Numeric:-        
                 char c = 'C';           // It stores single characters, such as 'a' or 'B'(16-bits)
                 boolean b = true;       // It stores values with two states: true or false
+                System.out.println("char: "+c+", boolean: "+b);
          
                 
 
         //(B) Non-Primitive:-  
-            String s = "Soumen"; // It stores text vslues
+            String s = "Soumen"; // It stores text values
+            System.out.println("string: "+s);
 
 
     }
