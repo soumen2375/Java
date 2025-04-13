@@ -1,4 +1,4 @@
-//Given an integer N , print its multiples 1 to 10
+//WAP to pint the multiplication table of any number
 package QUESTIONS;  
 import java.util.Scanner;
 public class problem_01 {
