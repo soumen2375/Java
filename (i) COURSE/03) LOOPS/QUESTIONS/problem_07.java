@@ -25,7 +25,7 @@ public class problem_07 {
 
         // Method-3:
         int a = 1, d = 2;
-        for(int i = 1; i < N; i++){
+        for(int i = 1; i <= N; i++){
             System.out.print(a + " ");
             a = a + d;
         }
