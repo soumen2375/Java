@@ -1,4 +1,3 @@
-
 //Weekdays and Weekends in week
 import java.util.Scanner;
 
