@@ -6,7 +6,6 @@
 
 01. Swapping two numbers in array  
 02. Find a maximum number in array  
-
 03. Find the largest element in an array  
 04. Find the smallest element in an array  
 05. Calculate the sum of all elements in an array  
