@@ -1,24 +1,119 @@
-#   For Loop
--   When we know the stoping condition that's time we used it and most frequently used loop.
+# Java Loops
 
--   for(initialization, condition, increment/ decrement){
-            //body         
-         } 
+Java provides several types of loops to execute a block of code repeatedly:
 
-#   While Loop
--   When we don't want to how much loop going on mean's what is the ending condition of the loop that's time we used it.
--   Ex: Like a take input from user and print, untill the user press 'ctrl+x'
+---
 
--   while(condition){
-        //body
-        increment/ decrement
+## For Loop
+
+- Use when the number of iterations is known.
+- Syntax:
+    ```java
+    for (initialization; condition; update) {
+        // body
     }
-        
-#   Do-While Loop
--   If the condition is not satisfied then, It runs at least ones.
+    ```
+- Example:
+    ```java
+    for (int i = 0; i < 5; i++) {
+        System.out.println("Iteration: " + i);
+    }
+    // Output:
+    // Iteration: 0
+    // Iteration: 1
+    // Iteration: 2
+    // Iteration: 3
+    // Iteration: 4
+    ```
 
--   do{
-        //body
-        increment/ decrement
-    }while(condition);
+---
 
+## While Loop
+
+- Use when the number of iterations is not known in advance.
+- Syntax:
+    ```java
+    while (condition) {
+        // body
+        // increment/decrement
+    }
+    ```
+- Example:
+    ```java
+    int i = 0;
+    while (i < 5) {
+        System.out.println("Iteration: " + i);
+        i++;
+    }
+    // Output:
+    // Iteration: 0
+    // Iteration: 1
+    // Iteration: 2
+    // Iteration: 3
+    // Iteration: 4
+    ```
+
+---
+
+## Do-While Loop
+
+- Executes the loop body at least once, even if the condition is false.
+- Syntax:
+    ```java
+    do {
+        // body
+        // increment/decrement
+    } while (condition);
+    ```
+- Example:
+    ```java
+    int i = 0;
+    do {
+        System.out.println("Iteration: " + i);
+        i++;
+    } while (i < 5);
+    // Output:
+    // Iteration: 0
+    // Iteration: 1
+    // Iteration: 2
+    // Iteration: 3
+    // Iteration: 4
+    ```
+
+---
+
+## Enhanced For Loop (For-Each Loop)
+
+- Used to iterate over arrays or collections.
+- Syntax:
+    ```java
+    for (dataType variable : arrayOrCollection) {
+        // body
+    }
+    ```
+- Example:
+    ```java
+    String[] names = {"Alice", "Bob", "Charlie"};
+    for (String name : names) {
+        System.out.println("Name: " + name);
+    }
+    // Output:
+    // Name: Alice
+    // Name: Bob
+    // Name: Charlie
+    ```
+
+---
+
+## Infinite Loops
+
+- Occur when the loop condition never becomes false.
+- Example:
+    ```java
+    // Infinite loop example (missing i++ will cause infinite loop)
+    int i = 0;
+    while (i < 5) {
+        System.out.println("Iteration: " + i);
+        // i++; // Uncommenting this will stop the infinite loop
+    }
+    ```
