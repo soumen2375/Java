@@ -1,4 +1,4 @@
-// Find index number of a given number  and also cheking wheather it's accending or desending order array using Binary Search
+// Find order-agnostic using Binary Search
 
 import java.util.Scanner;
 
@@ -10,42 +10,36 @@ public class Problem_02 {
         System.out.print("Enter target number: ");
         int target = sc.nextInt();
 
-        System.out.print(target + " index is: " + binarySearch(arr2, target));
+        System.out.println(target + " index is: " + binarySearch(arr, target));
+        System.out.println(target + " index is: " + binarySearch(arr2, target));
         sc.close();
     }
 
     static int binarySearch(int[] arr, int target) {
-
         int startIndx = 0, endIndx = arr.length - 1;
 
-        if (arr[0] < arr[endIndx]) {
-            while (startIndx <= endIndx) {
-                int midIndx = (startIndx + endIndx) / 2;
+        while (startIndx <= endIndx) {
+            int midIndx = (startIndx + endIndx) / 2;
 
-                if (target > arr[midIndx]) {
-                    startIndx = midIndx + 1;
-                } else if (target < arr[midIndx]) {
-                    endIndx = midIndx - 1;
-                } else {
-                    return midIndx;
+            if (arr[0] < arr[endIndx]) {
+                    if (target > arr[midIndx]) {
+                        startIndx = midIndx + 1;
+                    } else if (target < arr[midIndx]) {
+                        endIndx = midIndx - 1;
+                    } else {
+                        return midIndx;
+                    }
                 }
-            }
-            return -1;
-        } else {
-
-            while (startIndx <= endIndx) {
-                int midIndx = (startIndx + endIndx) / 2;
-
-                if (target > arr[midIndx]) {
-                    endIndx = midIndx - 1;
-                } else if (target < arr[midIndx]) {
-                    startIndx = midIndx + 1;
-                } else {
-                    return midIndx;
+            else {
+                    if (target > arr[midIndx]) {
+                        endIndx = midIndx - 1;
+                    } else if (target < arr[midIndx]) {
+                        startIndx = midIndx + 1;
+                    } else {
+                        return midIndx;
+                    }
                 }
-            }
-
-            return -1;
-        }
+        }    
+        return -1;
     }
 }
