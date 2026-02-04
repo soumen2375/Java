@@ -1,4 +1,4 @@
-// Simple Queue implements using linkedlist
+// Circular Queue implements using linkedlist
 class Linkedlistwithqueue {
 
     public static class Queue {
@@ -14,6 +14,7 @@ class Linkedlistwithqueue {
             } else {
                 tail.next = newQueue;
                 tail = newQueue;
+                tail.next = head;
             }
             size++;
         }
@@ -26,6 +27,7 @@ class Linkedlistwithqueue {
             }
             int headval = head.value;
             head = head.next;
+            tail.next = head;
             size--;
             return headval;
         }
@@ -76,8 +78,8 @@ class Linkedlistwithqueue {
         q.add(68);
         q.add(12);
         q.add(74);
-        System.out.println(q.remove());
-        System.out.println(q.size);
+        System.out.println("Remove Element: " + q.remove());
+        System.out.println("Size: " + q.size);
         q.display();
         q.peek();
 
